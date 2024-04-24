@@ -1,5 +1,7 @@
 # nworkers.cr
 
+[![test](https://github.com/kojix2/nworkers.cr/actions/workflows/ci.yml/badge.svg)](https://github.com/kojix2/nworkers.cr/actions/workflows/ci.yml)
+
 `nworkers.cr` is an experimental library in Crystal programming language that allows you to change the number of worker threads at runtime.
 
 ## Installation
