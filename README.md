@@ -39,6 +39,8 @@ NWorkers.add_worker(2)
 NWorkers.remove_worker
 ```
 
+[Documentation](https://kojix2.github.io/nworkers.cr/)
+
 ## Development
 
 To develop `nworkers.cr`, you can clone the repository and run `shards install` to fetch the dependencies. After making modifications, you can run `crystal spec` to ensure that the tests are passing.
