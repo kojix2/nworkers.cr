@@ -4,6 +4,8 @@
 
 `nworkers.cr` is an experimental library in Crystal programming language that allows you to change the number of worker threads at runtime.
 
+See [Crystal Forum : How to add command line options to specify the number of threads?](https://forum.crystal-lang.org/t/how-to-add-command-line-options-to-specify-the-number-of-threads/)
+
 ## Installation
 
 1. Add the dependency to your `shard.yml`:
