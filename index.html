@@ -120,7 +120,18 @@
     <use href="#octicon-link"/>
   </svg>
 </a>Development</h2>
-<p>To develop <code>nworkers.cr</code>, you can clone the repository and run <code>shards install</code> to fetch the dependencies. After making modifications, you can run <code>crystal spec</code> to ensure that the tests are passing.</p>
+<ul>
+<li>Crystal creates the number of workers specified by the environment variable ENV [“CRYSTAL_WORKERS”] only once at the beginning.
+<ul>
+<li>See <a href="https://github.com/crystal-lang/crystal/blob/master/src/crystal/scheduler.cr">scheduler.cr</a>.</li>
+</ul>
+</li>
+<li>This library will add workers later in <a href="https://github.com/kojix2/nworkers.cr/blob/main/src/ext/crystal_scheduler.cr">the same manner</a>.</li>
+<li>The author has used this library to create several small command line tools to verify that parallel processing with additional workers actually works.</li>
+<li>However, that there is no guarantee that adding or removing workers after the fact will work correctly.</li>
+<li>The author does not have sufficient knowledge or experience to examine whether this method will work well for long-running processes such as web applications.</li>
+<li>Pull requests and comments are always welcome!</li>
+</ul>
 <h2><a id="contributing" class="anchor" href="#contributing">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
@@ -133,7 +144,8 @@
 <li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
 <li>Create a new Pull Request</li>
 </ol>
-<p>Contributions are welcome! Please feel free to submit a Pull Request if you find a bug or you want to propose a new feature.</p>
+<p>Contributions are welcome!
+Please feel free to submit a Pull Request if you find a bug or you want to propose a new feature.</p>
 </div>
 </body>
 </html>
