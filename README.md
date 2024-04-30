@@ -45,7 +45,13 @@ NWorkers.remove_worker
 
 ## Development
 
-To develop `nworkers.cr`, you can clone the repository and run `shards install` to fetch the dependencies. After making modifications, you can run `crystal spec` to ensure that the tests are passing.
+- Crystal creates the number of workers specified by the environment variable ENV [“CRYSTAL_WORKERS”] only once at the beginning.
+  - See [scheduler.cr](https://github.com/crystal-lang/crystal/blob/master/src/crystal/scheduler.cr).
+- This library will add workers later in [the same manner](https://github.com/kojix2/nworkers.cr/blob/main/src/ext/crystal_scheduler.cr).
+- The author has used this library to create several small command line tools to verify that parallel processing with additional workers actually works.
+- However, that there is no guarantee that adding or removing workers after the fact will work correctly.
+- The author does not have sufficient knowledge or experience to examine whether this method will work well for long-running processes such as web applications.
+- Pull requests and comments are always welcome!
 
 ## Contributing
 
@@ -55,4 +61,6 @@ To develop `nworkers.cr`, you can clone the repository and run `shards install` 
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
 
-Contributions are welcome! Please feel free to submit a Pull Request if you find a bug or you want to propose a new feature.
+Contributions are welcome! 
+Please feel free to submit a Pull Request if you find a bug or you want to propose a new feature.
+
