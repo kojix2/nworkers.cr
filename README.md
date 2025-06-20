@@ -1,5 +1,9 @@
 # nworkers.cr
 
+
+2025-06-20 Archived. Use [Fiber::ExecutionContext::MultiThreaded](https://crystal-lang.org/api/Fiber/ExecutionContext/MultiThreaded.html) instead.
+---
+
 [![test](https://github.com/kojix2/nworkers.cr/actions/workflows/ci.yml/badge.svg)](https://github.com/kojix2/nworkers.cr/actions/workflows/ci.yml)
 
 `nworkers.cr` is an experimental library in Crystal programming language that allows you to change the number of worker threads at runtime.
